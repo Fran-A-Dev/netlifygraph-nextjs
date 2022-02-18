@@ -14,7 +14,8 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to Fran's <a href="https://nextjs.org">Netlify Graph Demo</a>
+          Welcome to Fran&apos;s-
+          <a href="https://netlify.com">Netlify Graph Demo</a>
           <h2>
             <Link href="/SpotifySearchForm">
               <a>Netlifgraph/Spotify Search</a>
