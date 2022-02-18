@@ -1,0 +1,28 @@
+mutation PlaySong($trackIds: [String!]!) @netlify(id: """8378e7fe-b8d0-4633-8997-d5466215a20d""", doc: """Start Playing A Song""") {
+  spotify {
+    playTrack(input: {trackIds: $trackIds}) {
+      player {
+        isPlaying
+      }
+    }
+  }
+}
+
+query SpotifySearch($query: String = "august") @netlify(id: """6a8dd192-d43c-4c45-a7f4-fa4ac22a372b""", doc: """Search for a song on Spotify.""") {
+  spotify {
+    search(data: {query: $query}) {
+      tracks {
+        name
+        id
+        artists {
+          name
+        }
+        album {
+          images {
+            url
+          }
+        }
+      }
+    }
+  }
+}
